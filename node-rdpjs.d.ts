@@ -1,4 +1,6 @@
-declare class RdpClient extends events.EventEmitter {
+import {EventEmitter} from 'events';
+
+declare class RdpClient extends EventEmitter {
     constructor(config?: RDPClientConfig);
     connected: boolean;
     connect(host: string, port: number): RdpClient;
@@ -11,7 +13,7 @@ declare class RdpClient extends events.EventEmitter {
 
 declare function createClient(config: RDPClientConfig): RdpClient;
 
-declare class RdpServer extends events.EventEmitter {
+declare class RdpServer extends EventEmitter {
     constructor(config: object, socket: any);
     connected: boolean;
     bufferLayer: any;
