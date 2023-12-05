@@ -49,7 +49,7 @@ declare interface RDPBitmap {
     height : number;
     bitsPerPixel : number;
     isCompressed : boolean;
-    data : Uint8ClampedArray;
+    data : Buffer;
 }
 
 export {
